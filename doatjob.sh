@@ -9,16 +9,16 @@ if [ -z ${CONCURRENT} ]; then
 	CONCURRENT=2
 fi
 
-if [ -z ${1} ]; then
+if [ -z ${PROJECT} ]; then
 	echo "No project defined"
 	exit 1
 fi
 
-if [ ! -d ${1} ]; then
-	git clone https://github.com/archiveteam/${1}
-	cd ${1}
+if [ ! -d ${PROJECT} ]; then
+	git clone https://github.com/archiveteam/${PROJECT}
+	cd ${PROJECT}
 else
-	cd ${1}
+	cd ${PROJECT}
 	git pull
 fi
 
