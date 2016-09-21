@@ -19,6 +19,7 @@ if [ ! -d ${PROJECT} ]; then
 	cd ${PROJECT}
 else
 	cd ${PROJECT}
+	rm -rf data/
 	git pull
 fi
 
